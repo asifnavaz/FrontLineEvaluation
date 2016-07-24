@@ -18,14 +18,14 @@ namespace FrontlineCodeChallenge
         /// <summary>
         /// This method prints the result by accepting the tree level as param
         /// </summary>
-        /// <param name="level"></param>
-        public void PrintTree(int level)
+        /// <param name="intLevel"></param>
+        public void PrintTree(int intLevel)
         {
             if (string.IsNullOrEmpty(strTitle))
                 return;
 
             //Appends the hyphen based on the tree level passed as argument
-            for (int i = 0; i < level-1; i++)
+            for (int i = 0; i < intLevel-1; i++)
             {
                 Console.Write("-");
             }
@@ -36,7 +36,7 @@ namespace FrontlineCodeChallenge
             if (lstChild != null)
             {
                 foreach (HyphenTree objHtree in lstChild)
-                    objHtree.PrintTree(level + 1);
+                    objHtree.PrintTree(intLevel + 1);
             }
                 
 
